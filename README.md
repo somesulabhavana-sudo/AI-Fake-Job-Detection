@@ -9,7 +9,7 @@ The main objective of this project is to help job seekers identify potentially f
 The system uses Natural Language Processing (NLP) and Machine Learning techniques to analyze job posting content.
 
 ## 🧠 How It Works
-AI-Fake-Job-Detection.png
+Screenshot 2026-08-08 203621
 1. The user enters job posting details.
 2. The system combines the relevant text fields.
 3. TF-IDF Vectorization converts the text into numerical features.
