@@ -9,7 +9,8 @@ The main objective of this project is to help job seekers identify potentially f
 The system uses Natural Language Processing (NLP) and Machine Learning techniques to analyze job posting content.
 
 ## 🧠 How It Works
-Screenshot 2026-08-08 203621
+<img width="1897" height="1052" alt="image" src="https://github.com/user-attachments/assets/efdbc034-1d35-4955-a72c-5742212acbbe" />
+
 1. The user enters job posting details.
 2. The system combines the relevant text fields.
 3. TF-IDF Vectorization converts the text into numerical features.
