@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Fake Job Detection System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Main Heading -->
+        <h1>🤖 AI Fake Job Detection System</h1>
+
+        <p class="subtitle">
+            Analyze a job posting using Machine Learning
+            and detect potentially fraudulent jobs.
+        </p>
+
+
+        <!-- Job Description Form -->
+        <form method="POST">
+
+            <textarea
+                name="job_description"
+                placeholder="Paste the complete job description here..."
+                required></textarea>
+
+            <button type="submit">
+                🔍 Detect Job
+            </button>
+
+        </form>
+
+
+        <!-- Prediction Result -->
+        {% if prediction %}
+
+            {% if prediction == "FAKE JOB" %}
+
+                <div class="result fake">
+
+                    🚨 FAKE JOB DETECTED
+
+                    <div class="confidence">
+                        Confidence: {{ confidence }}%
+                    </div>
+
+                </div>
+
+            {% else %}
+
+                <div class="result real">
+
+                    ✅ REAL JOB
+
+                    <div class="confidence">
+                        Confidence: {{ confidence }}%
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        {% endif %}
+
+
+        <!-- How It Works -->
+        <div class="how-it-works">
+
+            <h2>🔍 How It Works</h2>
+
+            <div class="steps">
+
+                <!-- Step 1 -->
+                <div class="step">
+
+                    <div class="step-number">1</div>
+
+                    <h3>📄 Job Posting</h3>
+
+                    <p>
+                        The user enters a job description
+                        into the system.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 2 -->
+                <div class="step">
+
+                    <div class="step-number">2</div>
+
+                    <h3>🧹 Text Processing</h3>
+
+                    <p>
+                        The job description is cleaned
+                        and prepared for analysis.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 3 -->
+                <div class="step">
+
+                    <div class="step-number">3</div>
+
+                    <h3>🔢 TF-IDF</h3>
+
+                    <p>
+                        Important words and phrases are
+                        converted into numerical features.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 4 -->
+                <div class="step">
+
+                    <div class="step-number">4</div>
+
+                    <h3>🤖 ML Model</h3>
+
+                    <p>
+                        A Logistic Regression model
+                        analyzes the extracted features.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 5 -->
+                <div class="step">
+
+                    <div class="step-number">5</div>
+
+                    <h3>🚨 Prediction</h3>
+
+                    <p>
+                        The system predicts whether the
+                        job is REAL or FAKE.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+
+            AI-powered Fake Job Detection System
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
